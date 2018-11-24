@@ -1,0 +1,27 @@
+echo"</center>";
+$query3="SELECT * FROM registration WHERE name='$m' AND password='$o'";
+$result1=mysql_query($query3);
+
+echo"<center>";
+echo"<table border='4'>";
+		echo"<tr>";
+		echo"<th>name</th>";
+		echo"<th>email</th>";
+		echo"<th>password</th>";
+		echo"<th>phone</th>";
+		echo"</tr>";
+while($row=mysql_fetch_array($result1))
+{
+echo"<tr>";
+		echo"<td>".$row[0]."</td>";
+		echo"<td>".$row[1]."</td>";
+		echo"<td>".$row[2]."</td>";
+		echo"<td>".$row[3]."</td>";
+		echo"</tr>";
+		}
+	
+
+		echo"</table>";		
+}
+echo"</center>";
+}
